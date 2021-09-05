@@ -1,0 +1,24 @@
+<!DOCvTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ListAccount</title>
+</head>
+<body>
+<th:block th:include = "/menu"></th:block>
+<h1>Create ListAccount:</h1>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Full Name</th>
+		<th>Balance</th>
+	</tr>
+	<tr th:each = "accountInfo : ${accountInfo}">
+		<td th:utext = "${accountInfo.id}"></td>
+		<td th:utext = "${accountInfo.full_Name}"></td>
+		<td th:utext = "${accountInfo.balance}"></td>
+	</tr>	
+</table>
+	
+</body>
+</html>
